@@ -1,0 +1,74 @@
+#container {
+    top:5%;
+  height:100%;
+  width: 100%;
+  text-align:center;
+  position: relative;
+  padding:0px;
+}
+#container div
+{
+  display: inline-block
+}
+#background {
+  border-radius:25px;
+  top:20%;
+  z-index: 100;
+  min-width: 42%;
+  max-width:42%;
+  max-height:30%;
+  min-height:30%;
+  position: absolute;
+  left:29%;
+  background-color:rgba(0,0,0,0.25);
+}
+#image {
+  max-width: 80%;
+  max-height: 80%;
+  min-width:80%;
+  min-height:80%;
+  left: 0;
+  top:500px
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
+#text {
+  
+  vertical-align: middle;
+  top:20%;
+  z-index: 100;
+  min-width: 40%;
+  max-width:40%;
+  max-height:40%;
+  position: absolute;
+  color:white;
+  font-size: 30px;
+  font-weight: bold;
+  left:30%;
+}
+#author {
+  vertical-align: middle;
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  min-width:40%;
+  max-width: 40%;
+  left:30%;
+  top: 40%;
+}
+#link {
+  vertical-align: middle;
+  z-index: 100;
+  position: absolute;
+  color: blue;
+  font-size: 30px;
+  font-weight: bold;
+  min-width:40%;
+  max-width: 40%;
+  left:45%;
+  top: 85%;
+}
