@@ -33,13 +33,9 @@
 html, body {
     margin: 0;
     height: 100%;
-    
-}
-body{
-  background-color:gray;
+    background-color: rgba(1,1,1,0.5);
 }
 #text {
-  
   vertical-align: middle;
   top:20%;
   z-index: 100;
@@ -47,10 +43,12 @@ body{
   max-width:40%;
   max-height:40%;
   position: absolute;
-  color:white;
   font-size: 30px;
   font-weight: bold;
   left:30%;
+ text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  font-family: fantasy;
+  color:white;
 }
 #author {
   vertical-align: middle;
@@ -61,18 +59,23 @@ body{
   font-weight: bold;
   min-width:40%;
   max-width: 40%;
-  left:30%;
+  left:29%;
   top: 40%;
+   text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  font-family: fantasy;
 }
 #link {
+  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  font-family: fantasy;
   vertical-align: middle;
   z-index: 100;
   position: absolute;
-  color: blue;
+  color: white;
   font-size: 30px;
   font-weight: bold;
   min-width:40%;
   max-width: 40%;
   left:45%;
   top: 85%;
+  
 }
