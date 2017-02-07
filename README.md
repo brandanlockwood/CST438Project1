@@ -9,7 +9,7 @@
 
 3. **What are known problems, if any, with your project?**
 
- - Current problem is handling the length of the quote it can sometimes go over the author of the quote.
+ - Current problem is handling the length of the quote can sometimes go over the author of the quote.
 
 4. **How would you improve it if you had more time?**
 
