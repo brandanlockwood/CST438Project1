@@ -5,7 +5,7 @@
 
 2. **How did you pick your searches to fit the theme?**
 
- - I based the searches around concepts around computer science and technologies that are out today.
+ - I based the searches around concepts of computer science and technologies that are out today.
 
 3. **What are known problems, if any, with your project?**
 
