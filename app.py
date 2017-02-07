@@ -13,16 +13,12 @@ db=dict()
 app = Flask(__name__,instance_relative_config=True)
 #grab keys from config file
 app.config.from_pyfile('config.py')
-#sets up authentication to use api
-auth = tweepy.OAuthHandler(app.config["TWEEPY_CONSUMER_KEY"],app.config["TWEEPY_CONSUMER_SECRET"])
-auth.set_access_token(app.config["TWEEPY_ACCESS_TOKEN_KEY"], app.config["TWEEPY_ACCESS_TOKEN_SECRET"])
-api = tweepy.API(auth)
-#python_obj = json.loads(api.rate_limit_status())
-something =api.rate_limit_status()
+
+
+
 #print something
-def search(text):
+def search(text,api):
     return api.search(q=text+" ;) -filter:links",lang="en",count=10,include_entities=True)
-    
 
 #globals 
 a = ["computer science","technology","smartphone","data","graphs","Windows 10","internet","data science","android","iphone","Internet of Things"]
@@ -76,6 +72,10 @@ def reset():
         
 @app.route('/')
 def setTweet():
+    #sets up authentication to use api
+    auth = tweepy.OAuthHandler(app.config["TWEEPY_CONSUMER_KEY"],app.config["TWEEPY_CONSUMER_SECRET"])
+    auth.set_access_token(app.config["TWEEPY_ACCESS_TOKEN_KEY"], app.config["TWEEPY_ACCESS_TOKEN_SECRET"])
+    api = tweepy.API(auth)
     global count
     #get random search term
     searchText=random.choice(a)
@@ -99,7 +99,7 @@ def setTweet():
     #check for validity of url
     other=checkURL(other["id"])
     #search for tweet
-    public_tweets=search(searchText)
+    public_tweets=search(searchText,api)
     #choose random tweet
     twitterObj=random.choice(public_tweets)
     #get username
@@ -108,7 +108,7 @@ def setTweet():
     tweet=twitterObj.text
     tweetId=getURL(twitterObj.id)
     #set data
-    user="author: "+twitterHandle
+    user=twitterHandle
     quote=tweet
     return render_template('hello.html',quote=quote,author=user,image=other,attr=tweetId)
   
