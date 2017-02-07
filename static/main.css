@@ -46,8 +46,8 @@ html, body {
   font-size: 30px;
   font-weight: bold;
   left:30%;
- text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
-  font-family: fantasy;
+ text-shadow: 0px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  font-family: serif;
   color:white;
 }
 #author {
@@ -61,12 +61,12 @@ html, body {
   max-width: 40%;
   left:29%;
   top: 40%;
-   text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
-  font-family: fantasy;
+   text-shadow: 0px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  font-family: serif;
 }
 #link {
-  text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
-  font-family: fantasy;
+  text-shadow: 0px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
+  font-family: serif;
   vertical-align: middle;
   z-index: 100;
   position: absolute;
