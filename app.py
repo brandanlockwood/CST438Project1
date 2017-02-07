@@ -10,8 +10,6 @@ import random
 session =dict()
 db=dict()
 app = Flask(__name__,instance_relative_config=True)
-#grab keys from config file
-app.config.from_pyfile('config.py')
 
 
 
