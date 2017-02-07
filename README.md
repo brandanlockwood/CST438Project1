@@ -1,7 +1,7 @@
 ## PROJECT 1
 1. **What was the theme you chose?**
 
- -Technology and Computer Science
+ - Technology and Computer Science
 
 2. **How did you pick your searches to fit the theme?**
 
