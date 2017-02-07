@@ -2,7 +2,6 @@ import os
 from flask import Flask,url_for,request,render_template,request
 import flask
 import requests
-#from flask_tweepy import Tweepy
 import tweepy
 import json
 from random import randint
@@ -43,7 +42,7 @@ def checkURL(idNum):
 def getId(searchTerm):
 
     headers = {
-    'Api-Key': app.config["GETTY_KEY"],
+    'Api-Key': os.getenv("GETTY_KEY"),
     }
     r=requests.get('https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&sort_order=best&phrase='+str(searchTerm), headers=headers)
     request_image=r.json()
@@ -73,8 +72,8 @@ def reset():
 @app.route('/')
 def setTweet():
     #sets up authentication to use api
-    auth = tweepy.OAuthHandler(app.config["TWEEPY_CONSUMER_KEY"],app.config["TWEEPY_CONSUMER_SECRET"])
-    auth.set_access_token(app.config["TWEEPY_ACCESS_TOKEN_KEY"], app.config["TWEEPY_ACCESS_TOKEN_SECRET"])
+    auth = tweepy.OAuthHandler(os.getenv("TWEEPY_CONSUMER_KEY"),os.getenv("TWEEPY_CONSUMER_SECRET"))
+    auth.set_access_token(os.getenv("TWEEPY_ACCESS_TOKEN_KEY"), os.getenv("TWEEPY_ACCESS_TOKEN_SECRET"))
     api = tweepy.API(auth)
     global count
     #get random search term
